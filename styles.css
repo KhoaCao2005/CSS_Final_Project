@@ -1,0 +1,90 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Skip Link: Hidden off-screen until focused */
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  background: #fff;
+  color: #000;
+  padding: 8px 12px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+/* When the Skip Link receives focus, make it visible */
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  outline: 2px solid #000;
+}
+
+/* Navigation Styling using Flexbox */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;                 /* Flex property */
+  background-color: #333;        /* Attractive background */
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 15px 20px;            /* Spacing */
+  color: #fff;                   /* Text color */
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover pseudo-class on navigation links */
+.nav-list a:hover {
+  background-color: #555;
+  color: #ff0;                   /* Change text color on hover */
+}
+
+/* Box Model Styling for All Images */
+img {
+  border: 2px solid #444;
+  padding: 5px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+/* Hover Effect on Images */
+img:hover {
+  transform: scale(1.05);        /* Slight zoom effect on hover */
+}
+
+/* Gallery Grid: Using CSS Grid for layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* At least two columns */
+  gap: 15px;
+  padding: 10px;
+}
+
+/* nth-child Selector: Style every other image in the gallery differently */
+.gallery-grid img:nth-child(odd) {
+  border-radius: 50%;            /* Circular border for odd-numbered images */
+}
+
+/* Additional spacing for header, main, and footer sections */
+header,
+main,
+footer {
+  padding: 20px;
+}
